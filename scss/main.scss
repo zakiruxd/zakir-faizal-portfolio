@@ -1,0 +1,221 @@
+@import "config";
+@import "menu";
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in {
+  animation: fadeIn ease 3s;
+}
+
+body {
+  font-family: $font-stack;
+  overflow-y: scroll;
+}
+nav {
+  background-color: $primary-color;
+  z-index: 1;
+
+  a {
+    color: $secondary-text-color;
+
+    &:hover {
+      @include easeOut;
+      color: $active-link-color;
+    }
+  }
+  li.active a {
+    color: $active-link-color;
+  }
+}
+.container,
+.container-fluid {
+  height: 100%;
+}
+.section_title {
+  text-align: center;
+  .title-underline {
+    width: 125px;
+    height: 6px;
+    margin: 15px auto;
+    background-color: $primary-color;
+  }
+}
+//WELCOME CONTAINER CSS
+#welcome_container {
+  height: 100vh;
+  .jumbotron {
+    text-align: center;
+    padding-top: 35vh;
+    background: none;
+  }
+  span {
+    color: $secondary-color;
+  }
+}
+// ABOUT ME CONTAINER CSS
+#about_me_container {
+  height: 100vh;
+  background-color: $secondary-background-color;
+
+  h3,
+  h4 {
+    color: $primary-color;
+  }
+  .jumbotron {
+    height: 100%;
+
+    background: $secondary-background-color;
+  }
+  #self_description {
+    img {
+      float: left;
+      width: 200px;
+      border: 5px solid $secondary-color;
+      border-radius: 40px;
+      margin-right: 15px;
+    }
+    .clear {
+      clear: both;
+    }
+  }
+  .edu_hobs {
+    display: flex;
+    justify-content: space-between;
+    .about_box {
+      margin: 30px 20px 0 20px;
+      width: 100%;
+    }
+    .about_icon {
+      font-size: 30px;
+      float: left;
+      padding: 0;
+      // display: inline-block;
+      margin-right: 10px;
+      color: $primary-color;
+    }
+    li {
+      overflow: hidden;
+      margin: 0;
+    }
+
+    strong {
+      color: $secondary-color;
+    }
+  }
+}
+//EXPERTISE CONTAINER CSS
+#expertise-container {
+  background-color: $primary-background-color;
+  .jumbotron {
+    background-color: $primary-background-color;
+  }
+  #expertise_content_items {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    .expertise_item {
+      // The code below will ensure all three boxes are the same width
+      flex: 1 1 0;
+    }
+  }
+  .expertise_icon {
+    font-size: 50px;
+    margin: 20px;
+    color: $secondary-color;
+  }
+}
+// PORTFOLIO CONTAINER CSS
+#portfolio-container {
+  background-color: $secondary-background-color;
+  .jumbotron {
+    background-color: $secondary-background-color;
+  }
+  .row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.display-flex > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+  }
+  #portfolio_content_items {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    .portfolio_item {
+      position: relative;
+      width: 400px;
+
+      img {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+      }
+      .portfolio_item_overlay {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+    .portfolio_item:hover img {
+      opacity: 0.2;
+    }
+    .portfolio_item:hover .portfolio_item_overlay {
+      opacity: 1;
+    }
+    .live-link-btn {
+      background-color: $secondary-color;
+      color: $secondary-text-color;
+      border: none;
+    }
+  }
+}
+//LET'S TALK CONTAINER CSS
+#lets-talk-container {
+  // position: absolute;
+  background-color: $primary-color;
+  height: 100%;
+  h1 {
+    text-align: center;
+    color: $secondary-text-color;
+  }
+  .jumbotron {
+    background-color: $primary-color;
+    #contact_form {
+      width: 100%;
+      margin: 0 auto;
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 15px 0;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+    button {
+      background-color: $secondary-color;
+      border: none;
+      border-radius: 5px;
+      float: right;
+    }
+  }
+}
+
+//FOOTER CSS
+footer {
+  background-color: $primary-color;
+  text-align: center;
+  color: $secondary-text-color;
+  padding: 20px;
+}

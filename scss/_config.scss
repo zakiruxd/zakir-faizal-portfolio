@@ -1,0 +1,187 @@
+$primary-color: #00818f;
+$secondary-color: #c4973e;
+$primary-background-color: #fff;
+$secondary-background-color: #f8f8f8;
+$primary-text-color: #373a3c;
+$secondary-text-color: #ffffff;
+$active-link-color: #eb9f00;
+
+$font-stack: "Open Sans";
+
+@mixin easeOut {
+  transition: all 0.3s ease-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  .container {
+    max-width: 98%;
+  }
+}
+
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 1.5rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  //Navbar Responsive Menu
+  .menu-btn {
+    display: block !important;
+  }
+
+  .navbar-brand {
+    margin: 0 auto;
+  }
+  .nav-item {
+    text-align: center;
+  }
+  .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    .container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  #about_me_container {
+    height: 100% !important;
+    .jumbotron {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #self_description {
+      overflow: hidden;
+      h3 {
+        text-align: center;
+      }
+      img {
+        float: none !important;
+        display: block;
+        margin: 20px auto !important;
+        width: 200px;
+        border: 5px solid $secondary-color;
+        border-radius: 40px;
+      }
+      .clear {
+        clear: both;
+      }
+    }
+    .edu_hobs {
+      display: block !important;
+      text-align: center;
+      .about_box {
+        h4 {
+          text-align: center;
+        }
+        ul {
+          display: inline-block;
+          padding: 0 !important;
+        }
+        li {
+          text-align: left;
+        }
+      }
+      .about_icon {
+        font-size: 50px !important;
+        float: none !important;
+        margin-right: 0px !important;
+        color: $primary-color;
+      }
+    }
+  }
+  // PORTFOLIO CSS
+  #portfolio-container {
+    background-color: $secondary-background-color;
+    .jumbotron {
+      background-color: $secondary-background-color;
+    }
+    .row.display-flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .row.display-flex > [class*="col-"] {
+      display: flex;
+      flex-direction: column;
+    }
+    #portfolio_content_items {
+      margin: 50px 0;
+      display: flex;
+      justify-content: center;
+      .portfolio_item {
+        position: relative;
+        width: 400px;
+
+        img {
+          opacity: 1;
+          display: block;
+          width: 100%;
+          height: auto;
+          transition: 0.5s ease;
+          backface-visibility: hidden;
+        }
+        .portfolio_item_overlay {
+          transition: 0.5s ease;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;
+        }
+      }
+      .portfolio_item:hover img {
+        opacity: 0.2;
+      }
+      .portfolio_item:hover .portfolio_item_overlay {
+        opacity: 1;
+      }
+      .live-link-btn {
+        background-color: $secondary-color;
+        color: $secondary-text-color;
+        border: none;
+      }
+    }
+  }
+
+  //EXPERTISE CONTAINER CSS
+  #expertise-container {
+    background-color: $primary-background-color;
+    .jumbotron {
+      background-color: $primary-background-color;
+    }
+    #expertise_content_items {
+      display: block !important;
+      justify-content: space-evenly;
+      text-align: center;
+      .expertise_item {
+        // The code below will ensure all three boxes are the same width
+        flex: 1 1 0;
+      }
+    }
+    .expertise_icon {
+      font-size: 50px;
+      margin: 20px;
+      color: $secondary-color;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
