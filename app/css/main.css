@@ -114,7 +114,19 @@
     #expertise-container .expertise_icon {
       font-size: 50px;
       margin: 20px;
-      color: #c4973e; } }
+      color: #c4973e; }
+  #lets-talk-container {
+    background-color: #00818f;
+    height: 100%; }
+    #lets-talk-container .jumbotron {
+      background-color: #00818f; }
+      #lets-talk-container .jumbotron button {
+        background-color: #c4973e;
+        border: none;
+        border-radius: 5px;
+        float: none !important;
+        display: block;
+        margin: 0 auto !important; } }
 
 @media (min-width: 768px) {
   .menu-btn {

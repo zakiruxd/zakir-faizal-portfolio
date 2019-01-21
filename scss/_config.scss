@@ -55,6 +55,7 @@ $font-stack: "Open Sans";
       padding-left: 0;
     }
   }
+  //ABOUT ME CSS
   #about_me_container {
     height: 100% !important;
     .jumbotron {
@@ -176,6 +177,25 @@ $font-stack: "Open Sans";
       font-size: 50px;
       margin: 20px;
       color: $secondary-color;
+    }
+  }
+
+  #lets-talk-container {
+    // position: absolute;
+    background-color: $primary-color;
+    height: 100%;
+
+    .jumbotron {
+      background-color: $primary-color;
+
+      button {
+        background-color: $secondary-color;
+        border: none;
+        border-radius: 5px;
+        float: none !important;
+        display: block;
+        margin: 0 auto !important;
+      }
     }
   }
 }
